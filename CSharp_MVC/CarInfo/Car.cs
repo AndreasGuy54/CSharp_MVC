@@ -29,5 +29,15 @@
                 Speed = 0;
             }
         }
+
+        // This creates compile-time polymorphism
+        public void Decelerate(bool power)
+        {
+            if (power == true)
+            {
+                Speed = 0;
+            }
+        }
+
     }
 }

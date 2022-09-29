@@ -1,4 +1,5 @@
-﻿using CSharp_MVC.Models;
+﻿using CSharp_MVC.CarInfo;
+using CSharp_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -26,6 +27,18 @@ namespace CSharp_MVC.Controllers
         public IActionResult Message()
         {
             return View();
+        }
+
+        public IActionResult BMWInfo()
+        {
+            BMW myCar = new();
+            myCar.Year = 2022;
+            myCar.Color = "Black";
+            myCar.Passengers = 4;
+            myCar.Speed = 0;
+            myCar.FuelLevel = 1.0M;
+
+            return View(myCar);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
