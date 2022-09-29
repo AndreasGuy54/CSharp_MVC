@@ -2,7 +2,7 @@
 {
     public class BMW : Car
     {
-        public string? Make { get; set; }
+        public string? Make { get { return "BMW"; } }
         public string? Model { get; set; }
         public string? Color { get; set; }
         public decimal FuelLevel { get; set; }
